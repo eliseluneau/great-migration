@@ -9,70 +9,71 @@
   <script src="https://unpkg.com/@antv/g2plot@2.4.31/dist/g2plot.min.js"></script>
 
   <style>
-   .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
-.graphic {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    section {
+      height: 100vh;
+      padding: 4rem;
+      box-sizing: border-box;
+    }
 
-.map-placeholder {
-  width: 80%;
-  height: 80%;
-  border: 2px dashed #999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #666;
-}
+    .intro {
+      background: #111;
+      color: white;
+    }
 
-.text {
-  padding: 4rem 3rem;
-}
+    .step {
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
 
-.step {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-}
+    .graphic {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-left: 1px solid #ddd;
+    }
 
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    
-    <!-- LEFT: MAP -->
-    <div class="graphic">
-      <div class="map-placeholder">
-        MAP WILL GO HERE
-      </div>
-    </div>
 
-    <!-- RIGHT: TEXT -->
-    <div class="text">
-      <section class="step">1900 — The South dominates</section>
-      <section class="step">1910 — Early movement begins</section>
-      <section class="step">1920 — Northern cities grow</section>
-      <section class="step">1930 — Migration accelerates</section>
-      <section class="step">1940 — War economy reshapes flows</section>
-      <section class="step">1950 — Midwest peaks</section>
-      <section class="step">1960 — Western growth</section>
-      <section class="step">1970 — A transformed geography</section>
-    </div>
+<section class="intro">
+  <h1>The Great Migration</h1>
+  <p>How the geographic distribution of Black Americans changed over the 20th century.</p>
+</section>
 
+<div class="container">
+  <div class="graphic">
+    MAP WILL GO HERE
   </div>
-</body>
 
+  <div>
+    <section class="step">1900 — The South</section>
+    <section class="step">1910 — Early movement</section>
+    <section class="step">1920 — First wave</section>
+    <section class="step">1930 — Urban concentration</section>
+    <section class="step">1940 — Acceleration</section>
+    <section class="step">1950 — Second wave</section>
+    <section class="step">1960 — Northern growth</section>
+    <section class="step">1970 — A reshaped map</section>
+  </div>
+</div>
+
+
+
+</body>
 </html>
