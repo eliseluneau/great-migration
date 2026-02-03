@@ -2,10 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>the Great Migration</title>
+  <title>The Great Migration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Antigravity -->
+  <script src="https://unpkg.com/@antv/g2plot@2.4.31/dist/g2plot.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    section {
+      height: 100vh;
+      padding: 4rem;
+      box-sizing: border-box;
+    }
+
+    .intro {
+      background: #111;
+      color: white;
+    }
+
+    .step {
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .graphic {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-left: 1px solid #ddd;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Great Migration</h1>
-  <p>This will become a scroll-driven map story.</p>
+
+<section class="intro">
+  <h1>The Great Migration</h1>
+  <p>How the geographic distribution of Black Americans changed over the 20th century.</p>
+</section>
+
+<div class="container">
+  <div>
+    <section class="step">1900 — The South</section>
+    <section class="step">1910 — Early movement</section>
+    <section class="step">1920 — First wave</section>
+    <section class="step">1930 — Urban concentration</section>
+    <section class="step">1940 — Acceleration</section>
+    <section class="step">1950 — Second wave</section>
+    <section class="step">1960 — Northern growth</section>
+    <section class="step">1970 — A reshaped map</section>
+  </div>
+
+  <div class="graphic">
+    MAP WILL GO HERE
+  </div>
+</div>
+
 </body>
 </html>
