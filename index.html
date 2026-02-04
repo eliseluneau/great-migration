@@ -77,14 +77,16 @@
 </div>
 
 <script>
+  let currentYear = null;
+
   const steps = document.querySelectorAll('.step');
 
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const year = entry.target.dataset.year;
-          console.log('Active year:', year);
+          currentYear = entry.target.dataset.year;
+          console.log('Current year state:', currentYear);
         }
       });
     },
@@ -95,6 +97,7 @@
 
   steps.forEach(step => observer.observe(step));
 </script>
+
 
   
 </body>
