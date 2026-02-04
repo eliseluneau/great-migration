@@ -75,6 +75,27 @@
   </div>
 </div>
 
+<script>
+  const steps = document.querySelectorAll('.step');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const year = entry.target.dataset.year;
+          console.log('Active year:', year);
+        }
+      });
+    },
+    {
+      threshold: 0.6
+    }
+  );
+
+  steps.forEach(step => observer.observe(step));
+</script>
+
+  
 </body>
 
 </html>
