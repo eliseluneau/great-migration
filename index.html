@@ -85,10 +85,13 @@
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          currentYear = entry.target.dataset.year;
-          console.log('Current year state:', currentYear);
-        }
+    if (entry.isIntersecting) {
+  currentYear = entry.target.dataset.year;
+
+  document.getElementById('year-label').textContent =
+    'Year: ' + currentYear;
+}
+
       });
     },
     {
